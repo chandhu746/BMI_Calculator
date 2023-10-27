@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandhu's BMI Calculator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}"
+    
+</head>
+<h1>BMI Calculator developed by Chandhu</h1>
+<body>
+    <div class="main">
+        <form class="pure-form" method="post" action="/"> 
+        Enter Your weight in Kg's:<br>
+        <input type="text" name="weight" placeholder="Enter your weight here" required><br> 
+        Enter Your height in cm's:<br>
+        <input type="text" name="height" placeholder="Enter Your height  here"><br>
+        <button type="submit" class="pure-button pure-button-primary" value="submit">Submit</button>
+
+        </form>
+    </div>
+    <br>
+    <div>
+        {% if bmi %}
+          <p> Your BMI is {{bmi}} </p>
+
+        {% endif %}
+    </div>
+    
+</body>
+</html>
